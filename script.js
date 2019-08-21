@@ -7,6 +7,8 @@ $('#name').focus(); // Making the focus of the cursor in the Name field When Pag
 
 // Hide the job role options When user choose the "Other"Option.
 
+$('#other-title').hide(); // Hiding the Job Role When Page Load.
+
 $('#title').change(function () {
 	if ($('#title').val() === "other") {
 		$('#other-title').show();
@@ -111,6 +113,7 @@ bitcoin.hide();
 
 // function for show and hide the options according to user choice..
 
+$('#credit-card').hide(); // Hiding the credit card option on Page load.
 
 $('#payment').on('change', function () {
 	$(this).children().eq(0).hide();
