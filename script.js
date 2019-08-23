@@ -98,8 +98,8 @@ function totalPrice(total) {
 //******************************** Payment Options Section************************//
 
 // Hide 'Select Payment Method'
-
-$('#payment').children().eq(0).hide();
+$('#payment option:selected').attr('disabled','disabled');
+$('#payment')[0].selectedIndex = $('#payment option[value = "credit card"]').index();
 
 // Hiding the 'Paypal' and  'Bitcoin ' options when User choose the Credit Card option.
 
@@ -112,8 +112,6 @@ const bitcoin = $('#credit-card').next().next();
 bitcoin.hide();
 
 // function for show and hide the options according to user choice..
-
-$('#credit-card').hide(); // Hiding the credit card option on Page load.
 
 $('#payment').on('change', function () {
 	$(this).children().eq(0).hide();
